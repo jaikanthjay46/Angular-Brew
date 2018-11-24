@@ -14,8 +14,10 @@ export class ApiService {
   getRandomBeers(ids){
     var url;
     if(ids != null) {
-      url = `${this.BASE_URL}?ids`
-      for(id of ids){ url += (id+"|")}
+      url = `${this.BASE_URL}?ids=`
+      for(let id of ids){ url += (id+"|")}
+      console.log(url);
+      
     } else {
      url = `${this.BASE_URL}?ids=27|15|17|4|5|6`
     }

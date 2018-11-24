@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { FavoritesComponent } from "../favorites/favorites.component"
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,12 @@ export class HomeComponent implements OnInit {
     console.log("hhhh"+id)
     this.favorites.push(id);
     localStorage.clear();
-    localStorage.setItem("favorites", JSON.stringify(this.favorites)
+    localStorage.setItem("favorites", JSON.stringify(this.favorites));
+    this.api.getRandomBeers(this.favorites)
+      .subscribe(e => {
+        console.log(e);        
+      FavoritesComponent.products = e;
+    })
   }
 
   ngOnInit() {
