@@ -8,9 +8,7 @@ import { FavoritesComponent } from "../favorites/favorites.component"
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  products:any = [
-    {'image': "//placehold.it/180", title: "hello", desc: "lorem sajhjka sdjfhkjdsf sdkjfbksdjfh skjdfbkdsjfh"},
-  ]
+  products:any = []
   favorites = [];
   constructor(public api: ApiService) { }
 

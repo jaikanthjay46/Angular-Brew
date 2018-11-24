@@ -6,11 +6,9 @@ import { HomeComponent  } from "../home/home.component"
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css']
 })
-export class FavoritesComponent implements OnInit {
+export class FavoritesComponent  {
 
-  static products:any = [
-    {'image': "//placehold.it/180", title: "hello", desc: "lorem sajhjka sdjfhkjdsf sdkjfbksdjfh skjdfbkdsjfh"},
-  ]
+  static products:any = []
 
   get productsstatic() {
     return FavoritesComponent.products;
