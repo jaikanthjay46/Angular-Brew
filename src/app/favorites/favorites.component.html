@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngFor="let product of products">
+          <div class="col-4 my-5">
+              <div class="card">
+                  <div class="row no-gutters">
+                      <div class="col-auto">
+                          <img height="100px" width="100px" [src]="product.image_url" class="img-fluid" alt="">
+                      </div>
+                      <div class="col">
+                          <div class="card-block px-2">
+                              <h4 class="card-title">{{ product.name }}</h4>
+                              <p class="card-text">{{ product.description }}</p> 
+                            
+                          </div>
+                      </div>
+                  </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+</div>

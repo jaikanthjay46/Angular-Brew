@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-flex justify-content-center w-100 my-5">      
+      <div id="search" class="input-group w-50">
+        <input style="border-radius: 1rem 0 0 1rem;" type="text" name="search" value="" placeholder="Search for Beer" class="form-control input-lg">
+        <span class="input-group-append">
+          <button type="button" style="border:none;font-size: 15px;border-radius: 0 1rem 1rem 0;" class="btn btn-fsearch btn-lg">Search <i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <ng-container *ngFor="let product of products">
+    <div class="col-4 my-5">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto">
+                    <img height="100px" width="100px" [src]="product.image_url" class="img-fluid" alt="">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4 class="card-title">{{ product.name }}</h4>
+                        <p class="card-text">{{ product.description }}</p> 
+                        <button (click)="addToFavorites(product.id)" style="background-color: unset;color: red;border: none;" class="btn btn-primary btn-outline"><i class="fa fa-heart"></i></button>                       
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+</div>
